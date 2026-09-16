@@ -81,9 +81,9 @@ object contenedorPortuario {
         cosasQueTieneAdentro.add(cosaAAgregar)
     }
 
-    method peso() = 100 + cosasQueTieneAdentro.sum(c => c.peso())
+    method peso() = 100 + cosasQueTieneAdentro.sum({c => c.peso()})
 
-    method nivelDePeligrosidad() = if(cosasQueTieneAdentro.isEmpty()) 0 else cosasQueTieneAdentro.max(c => c.nivelDePeligrosidad())
+    method nivelDePeligrosidad() = if(cosasQueTieneAdentro.isEmpty()) 0 else cosasQueTieneAdentro.max({c => c.nivelDePeligrosidad()})
 }
 
 object residuosRadioactivos {
