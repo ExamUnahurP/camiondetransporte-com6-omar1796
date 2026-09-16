@@ -10,11 +10,15 @@ object camion {
         cosas.remove(cosa)
     }
 
+    method cosas() = cosas
+
     method peso() = 1000 + cosas.sum({c => c.peso()})
 
     method elPesoDeTodasLasCosasEsPar() = cosas.all({c => c.peso().even()})
 
     method algunaCosaPesaTal(pesoABuscar) = cosas.any({c => c.peso() == pesoABuscar})
 
-    method primeraCosaConNivelDePeligrosidad(nivelDePeligrosidad) = cosas.filter({c => c.nivelDePeligrosidad() == nivelDePeligrosidad}).first()
+    method primeraCosaConNivelDePeligrosidad(nivelDePeligrosidadABuscar) = cosas.filter({c => c.nivelDePeligrosidad() == nivelDePeligrosidadABuscar}).first
+
+    
 }
