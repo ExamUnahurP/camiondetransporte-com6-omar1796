@@ -7,7 +7,7 @@ object knightRider {
 
 object bumblebee {
 
-    var forma = au
+    var forma = auto
 
     method peso() = 800
 
@@ -26,10 +26,20 @@ object robot {
 
 object paqueteDeLardrillos {
 
+    var cantidadDeLadrillos = 3
+
+    method cambiarCantidadDeLadrillos(nuevaCantidad){
+        cantidadDeLadrillos = nuevaCantidad
+    }
+
+    method peso() = cantidadDeLadrillos * 2
+
+    method nivelDePeligrosidad() = 2
 }
 
 object arenaAGranel {
 
+    
 }
 
 object bateriaAntiaerea {
