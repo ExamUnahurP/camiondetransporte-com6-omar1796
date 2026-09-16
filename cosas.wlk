@@ -39,15 +39,29 @@ object paqueteDeLardrillos {
 
 object arenaAGranel {
 
-    
+    var peso = 20
+
+    method cambiarPeso(nuevoPeso){
+        peso = nuevoPeso
+    }
+
+    method nivelDePeligrosidad() = 1
 }
 
 object bateriaAntiaerea {
 
+    var estaConMisiles = true
+
+    method peso() = if(estaConMisiles) 300 else 200
+    
+    method nivelDePeligrosidad() = if(estaConMisiles) 100 else 0
 }
 
 object contenedorPortuario {
 
+    const cosasQueTieneAdentro = []
+
+    method peso() = 100 + cosasQueTieneAdentro
 }
 
 object residuosRadioactivos {
