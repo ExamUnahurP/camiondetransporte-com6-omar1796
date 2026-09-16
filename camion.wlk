@@ -20,5 +20,9 @@ object camion {
 
     method primeraCosaConNivelDePeligrosidad(nivelDePeligrosidadABuscar) = cosas.filter({c => c.nivelDePeligrosidad() == nivelDePeligrosidadABuscar}).first
 
+    method cosasQueSuperanUnNivelDePeligrosidad(nivelDePeligrosidad) = cosas.filter({c => c.nivelDePeligrosidad() > nivelDePeligrosidad})
+
+    method cosasConNivelDePeligrosidadMayorAlPeligroDeUnaCosa(unaCosa) = cosas.filter({c => c.nivelDePeligrosidad() > unaCosa.nivelDePeligrosidad()})
+
     
 }
