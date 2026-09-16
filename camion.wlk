@@ -16,5 +16,5 @@ object camion {
 
     method algunaCosaPesaTal(pesoABuscar) = cosas.any({c => c.peso() == pesoABuscar})
 
-    
+    method primeraCosaConNivelDePeligrosidad(nivelDePeligrosidad) = cosas.filter({c => c.nivelDePeligrosidad() == nivelDePeligrosidad}).first()
 }
