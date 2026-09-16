@@ -12,5 +12,9 @@ object camion {
 
     method peso() = 1000 + cosas.sum({c => c.peso()})
 
-    method algunaCosaPesaTal(pesoACalc) = 
+    method elPesoDeTodasLasCosasEsPar() = cosas.all({c => c.peso().even()})
+
+    method algunaCosaPesaTal(pesoABuscar) = cosas.any({c => c.peso() == pesoABuscar})
+
+    
 }
