@@ -75,6 +75,12 @@ object contenedorPortuario {
 
     const cosasQueTieneAdentro = []
 
+    method cosasQueTieneAdentro() = cosasQueTieneAdentro
+
+    method agregarCosa(cosaAAgregar){
+        cosasQueTieneAdentro.add(cosaAAgregar)
+    }
+
     method peso() = 100 + cosasQueTieneAdentro.sum(c => c.peso())
 
     method nivelDePeligrosidad() = if(cosasQueTieneAdentro.isEmpty()) 0 else cosasQueTieneAdentro.max(c => c.nivelDePeligrosidad())
