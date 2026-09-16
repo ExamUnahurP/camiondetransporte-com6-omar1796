@@ -61,7 +61,9 @@ object contenedorPortuario {
 
     const cosasQueTieneAdentro = []
 
-    method peso() = 100 + cosasQueTieneAdentro
+    method peso() = 100 + cosasQueTieneAdentro.sum(c => c.peso())
+
+    method nivelDePeligrosidad() = if(cosasQueTieneAdentro.isEmpty()) 0 else cosasQueTieneAdentro.max(c => c.nivelDePeligrosidad())
 }
 
 object residuosRadioactivos {
